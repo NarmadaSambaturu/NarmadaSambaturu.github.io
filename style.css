@@ -2,22 +2,22 @@ html, body {
 	margin: 0;
 	font: 100% "Trebuchet MS", Arial, Helvetica, sans-serif;
 	color: #000;
-	background: /*#e3fcf2;*/ #edfce3;
+	background: /*#e3fcf2; #edfce3*/ #ffffff;
 }
-#container {
-	margin: 20px auto;
-	background: /*#e3fcf2; #defcf0;*/ #edfce3;
-}
-h1 {
+
+#container h1 {
+	padding: 5px;
 	line-height: 50px;
 	margin: 0;
 	text-align: center;
+	color: white;
+	background: #005A43;
 }
 #left {
 	width: auto;
 	padding: 20px;
 	float: left;
-	background: /*#e3fcf2;*/ #edfce3;
+	background: /*#e3fcf2; #edfce3*/ #ffffff;
 }
 #right {
 	padding: 20px;
