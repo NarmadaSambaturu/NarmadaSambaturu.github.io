@@ -1,164 +1,293 @@
 <!doctype html>
 	<html>
 	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="cache-control" content="max-age=0" />
-	<meta http-equiv="cache-control" content="no-cache" />
-	<meta http-equiv="expires" content="0" />
-	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-	<meta http-equiv="pragma" content="no-cache" />
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="dropdown_actions.js"></script>
-	<title>Narmada Sambaturu</title>
+		<meta name="author" content="Narmada Sambaturu">
+		<meta name="description" content="Narmada Sambaturu's Homepage" />
+		<meta name="keywords" content="narmada sambaturu, homepage, multi-scale modeling, infectious diseases, mathematical modeling, systems biology, epidemiology, HIV, influenza, HLA, tuberculosis" />
+		<meta charset="utf-8">
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Narmada Sambaturu</title>
+		<script>
+			function includeHTML() {
+			  var z, i, elmnt, file, xhttp;
+			  /*loop through a collection of all HTML elements:*/
+			  z = document.getElementsByTagName("*");
+			  for (i = 0; i < z.length; i++) {
+				elmnt = z[i];
+				/*search for elements with a certain atrribute:*/
+				file = elmnt.getAttribute("w3-include-html");
+				if (file) {
+				  /*make an HTTP request using the attribute value as the file name:*/
+				  xhttp = new XMLHttpRequest();
+				  xhttp.onreadystatechange = function() {
+					if (this.readyState == 4) {
+					  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+					  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+					  /*remove the attribute, and call this function once more:*/
+					  elmnt.removeAttribute("w3-include-html");
+					  includeHTML();
+					}
+				  }      
+				  xhttp.open("GET", file, true);
+				  xhttp.send();
+				  /*exit the function:*/
+				  return;
+				}
+			  }
+			};
+		</script>
 	</head>
+	
 	<body>
+	
+	<!-- Top Navigation Menu -->
+	<div id="navbar">
+		<div class="topnav">
+		  <a href="index.html" class="active"><h1 color=white font-weight=bold>Narmada Sambaturu</h1></a>
+		  <div id="myLinks" onclick="myNavReactFunction()">
+			<a class="navitems" href="index.html">Home</a>
+			<a class="navitems" href="#research">Research Interests</a>
+			<a class="navitems" href="#awards">Awards</a>
+			<a class="navitems" href="#funding">Research Funding</a>
+			<a class="navitems" href="#publications">Publications</a>
+			<a class="navitems" href="Narmada_Sambaturu_CV.pdf">CV</a>
+			<a class="navitems" href="#invited_talks">Invited Talks</a>
+			<a class="navitems" href="#teaching">Teaching</a>
+			<a class="navitems" href="#past">Past</a>
+			<a class="navitems" href="#news">News</a>
+		  </div>
+		  <a href="javascript:void(0);" class="menubtncontainer" id="menubtn" onclick="myNavFunction(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		  </a>
+		</div>
+	</div>
+	
 	<div id="container">
-	<h1>Narmada Sambaturu</h1>
-	<div id="outer_dropdown" class="dropdown">
-	<button onclick="myFunction()" class="dropbtn">...</button>
-	<div id="myDropdown" class="dropdown-content">
-    <a href="index.html">Home</a>
-	<a href="#research">Research Interests</a>
-	<a href="#awards">Awards</a>
-	<a href="#funding">Research Funding</a>
-	<a href="#publications">Publications</a>
-	<a href="Narmada_Sambaturu_CV.pdf">CV</a>
-	<a href="#invited_talks">Invited Talks</a>
-	<a href="#teaching">Teaching</a>
-	<a href="#past">Past</a>
-	<a href="#news">News</a>
-	</div><!--end myDropdown-->
-	</div><!--end outer_dropdown-->
-	<hr color="black"><hr color="black">
-	</div><!--end container-->
-	<div id="left">
-	<img src="Narmada_Sambaturu_headshot.jpeg" alt="My picture" width="230" height="270">
-	<p>
-	<b>Contact:</b><br /><a name="contact"></a>
-	<a href="mailto:nsambaturu@binghamton.edu">nsambaturu@binghamton.edu</a> <br />
-	<a href="mailto:narmada.sambaturu@gmail.com">narmada.sambaturu@gmail.com</a> <br />
-	<br />
-	<b>Office:</b><br /><a name="contact"></a>
-	<a href="https://maps.app.goo.gl/7nGdXxEdmKxoCH5J9">EB R-14</a> <br />
-	Systems Science and <br /> Industrial Engineering,<br />
-	Engineering & Science Building,<br />
-	Binghamton University,<br />
-	Binghamton 13902 <br />
-	New York, USA <br />
-	[<a href="Narmada_Sambaturu_CV.pdf">CV</a>] [<a href="https://scholar.google.co.in/citations?user=afioMdsAAAAJ&hl=en">Google Scholar</a>] <br />
-	[<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Sambaturu+N%5BAuthor%5D">PubMed</a>] [<a href="https://www.linkedin.com/in/narmada-sambaturu-76155720/">Linkedin</a>] <br />
-	</p>
-	</div><!--end left-->
-	<div id="right">
-	<p align="justify">
-	Assistant Professor, <a href="https://www.binghamton.edu/ssie/index.html">School of Systems Science and Industrial Engineering</a>, <br />
-	<a href="https://www.binghamton.edu/watson/">Thomas J. Watson College of Engineering and Applied Science,</a> <br /> <a href="https://www.binghamton.edu/">Binghamton University</a>, State University of New York. <br />
-	<br />
-	PhD, Mathematical Biology, <a href="https://iisc.ac.in/">Indian Institute of Science</a>, India. <br />
-	<br />
-	MSc, School of Computing, <a href="https://nus.edu.sg/">National University of Singapore</a>, Singapore. <br />
-	<br />
-	BE, Computer Science and Engineering, <a href="https://vtu.ac.in/">Visveswaraya Technological University</a>, India. <br />
-	<hr>
-	<h2>Research Interests</h2><a name="research"></a>
-	<p align="justify">Mathematical and Computational Biology, Systems Biology, Epidemiology, Vaccines and Immunotherapy, Multi-scale Modeling, Immune Response, Host-pathogen Interactions.</p>
-	<p>The focus of my research is developing novel, multi-scale, data-driven methods to study infectious diseases and heterogenous host immune responses.
-	 Some of my goals are: </p>
-	<ul>
-	<li> <p>- Understanding how the host affects pathogen evolution, </p>
-	<li> <p>- Improving the prediction and control of epidemics, </p>
-	<li> <p>- Identifying the pathways and genes involved in a disease, and using this knowledge to design interventions, </p>
-	<li> <p>- Rational vaccine design, </p>
-	<li> <p>- Designing public health policies which maximize welfare while accounting for issues like different degrees of adherance to interventions, and disparities in access to healthcare, and </p>
-	<li> <p>- Anticipating novel epi/pandemic-causing pathogens and zoonotic transmissions. </p>
-	</ul>
-	<hr>
-	<h2>Awards</h2><a name="awards"></a>
-	<ul>
-	<li> <p>-  Best Student Paper Award, 2015 IEEE International Conference on Bioinformatics and Biomedicine (BIBM). </p>
-	<li> <p>-  Travel awards: BIBM (2015); RECOMB/ISCB Conference on Regulatory and Systems Genomics (2017); Lakshmi & Aravamudan Student Travel Fund, Office of Development and Alumni Affairs, IISc (2018).</p>
-	<li> <p>-  One of 50 students selected from all over India for participation in a summer camp in Biotechnology at M.S.Swaminathan Research Foundation, Chennai, India (2003). </p>
-	<li> <p>-  All India Rank 25 in Secondary School Certificate (Std X) (2003).</p>
-	</ul>
-	<hr>
-	<h2>Research Funding</h2><a name="funding"></a>
-	<ul>
-	<li> <p>-  Director's Postdoctoral Fellow, Laboratory Directed Research & Development, Los Alamos National Laboratory, New Mexico, USA (2021). </p>
-	</ul>
-	<hr>
-	<h2>Publications</h2><a name="publications"></a>
-	<ul>
-	<li> <p>-  Tin Phan, Jessica M. Conway, Nicole Pagane, Jasmine Kreig, <b>Narmada Sambaturu</b>, Sarafa Iyaniwura, Jonathan Z. Li, Ruy M. Ribeiro, Ruian Ke, and Alan S. Perelson. <a href="https://doi.org/10.1371/journal.ppat.1012236">Understanding early HIV-1 rebound dynamics following antiretroviral therapy interruption: The importance of effector cell expansion</a>. PLOS Pathogens, 2024 20(7): e1012236. [<a href="https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1012236&type=printable">pdf</a>, <a href="phan2024Understanding.bib">bib</a>] </p>
-	<li> <p>-  Ushashi Banerjee, Adithya Chedere, Raksha Padaki, Abhilash Mohan, <b>Narmada Sambaturu</b>, Amit Singh, and Nagasuma Chandra. <a href="https://pubs.acs.org/doi/10.1021/acs.jcim.3c00845">PathTracer comprehensively identifies hypoxia-induced dormancy adaptations in Mycobacterium tuberculosis</a>. Journal of Chemical Information and Modeling, 2023. [<a href="https://pubs.acs.org/doi/epdf/10.1021/acs.jcim.3c00845">pdf</a>, <a href = "banerjee2023pathtracer.bib">bib</a>] </p>
-	<li> <p>-  Vishal Rao, Ushashi Banerjee, <b>Narmada Sambaturu</b>, Sneha Chunchanur, R. Ambica, and Nagasuma Chandra. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/tan.15071">Pressured cytotoxic T cell epitope strength among SARS-CoV-2 variants correlates with COVID-19 severity</a>. HLA, 2023. [<a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/tan.15071#accessDenialLayout">pdf</a>, <a href = "rao2023pressured.bib">bib</a>] </p>
-	<li> <p>-  Emily J. Fray, Fengting Wu, Francesco R. Simonetti, Carolin Zitzmann, <b>Narmada Sambaturu</b>, Carmen Molina-París, Alexandra M. Bender et al. <a href="https://www.cell.com/cell-host-microbe/fulltext/S1931-3128(23)00041-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1931312823000410%3Fshowall%3Dtrue">Antiretroviral therapy reveals triphasic decay of intact SIV genomes and persistence of ancestral variants</a>. Cell Host & Microbe 31, no. 3 2023: 356-372. [<a href="https://www.cell.com/cell-host-microbe/pdfExtended/S1931-3128(23)00041-0">pdf</a>, <a href = "fray2023antiretroviral.bib">bib</a>] </p>
-	<li> <p>-  Piyush Agrawal*, <b>Narmada Sambaturu</b>*, Gulden Olgun, and Sridhar Hannenhalli. <a href="https://www.frontiersin.org/articles/10.3389/fimmu.2022.918817/full">A path-based analysis of infected cell line and COVID-19 patient transcriptome reveals novel potential targets and drugs against SARS-CoV-2</a>. Frontiers in immunology  13 2022. (*equal contribution). [<a href="https://www.frontiersin.org/articles/10.3389/fimmu.2022.918817/pdf?isPublishedV2=False">pdf</a>, <a href = "agrawal2022path.bib">bib</a>] </p>
-	<li> <p>-  <b>Narmada Sambaturu</b>. <a href="https://etd.iisc.ac.in/handle/2005/5071">Multi-scale modelling of immune response and disease spread: methods and applications</a>. PhD Dissertation. 2021. [<a href="PhD_thesis.bib">bib</a>]</p>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Vaidehi Pusadkar, Sridhar Hannenhalli, and Nagasuma Chandra. <a href="https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/btaa941/5952670?redirectedFrom=fulltext">PathExt: a general framework for path-based mining of omics-integrated biological networks.</a>, Bioinformatics 37, no. 9 (2021): 1254-1262. [<a href="PathExt.pdf">pdf</a>, <a href="PathExt.bib">bib</a>, <a href="https://github.com/NarmadaSambaturu/PathExt">GitHub</a>]</p>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Sumanta Mukherjee, Mart&iacute;n L&oacute;pez-Garc&iacute;a, Carmen Molina-Par&iacute;s, Gautam I Menon, and Nagasuma Chandra. <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006069"> Role of genetic heterogeneity in determining the epidemiological severity of H1N1 influenza.</a> PLoS Computational Biology 14(3) (2018): e1006069. [<a href="SIR_genetic_heterogeneities.pdf">pdf</a>, <a href="SIR_genetic_heterogeneities.bib">bib</a>]</p>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Madhulika Mishra, and Nagasuma Chandra. <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-2792-1">EpiTracer - an algorithm for identifying epicenters in condition-specific biological networks.</a> BMC genomics 17.4 (2016): 543. [<a href="epitracer_bmc_genomics.pdf">pdf</a>, <a href = "epitracer_bmc_genomics.bib">bib</a>, <a href="https://github.com/NarmadaSambaturu/EpiTracer">GitHub</a>]</p>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Madhulika Mishra, and Nagasuma Chandra. <a href = "http://ieeexplore.ieee.org/document/7359677/?reload=true">EpiTracer - an algorithm for identifying epicenters in condition-specific biological networks.</a> Proceedings of the 2015 IEEE International Conference on Bioinformatics and Biomedicine (BIBM). IEEE Computer Society, 2015. (<b><i>Best Student Paper Award.</i></b>) [<a href="epitracer_ieee_explore.pdf">pdf</a>, <a href="epitracer_ieee_explore.bib">bib</a>, <a href="https://github.com/NarmadaSambaturu/EpiTracer">GitHub</a>]</p>
-	<li> <p>-  <b>Narmada Sambaturu</b>. <a href="http://scholarbank.nus.edu.sg/handle/10635/118611">Towards handling repeats in genome assembly</a>. MSc Dissertation. 2014. [<a href="msc_dissertation.pdf">pdf</a>, <a href="MSc_thesis.bib">bib</a>]</p>
-	<li> <p>-  Jayavel Sridhar, <b>Narmada Sambaturu</b>, Radhakrishnan Sabarinathan, Hong-Yu Ou, Zixin Deng, Kanagaraj Sekar, Ziauddin Ahamed Rafi, and Kumar Rajakumar. <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0011970">sRNAscanner: a computational tool for intergenic small RNA detection in bacterial genomes.</a> Plos one 5, no. 8 (2010): e11970. [<a href="srnascanner.pdf">pdf</a>, <a href="srnascanner.bib">bib</a>]</p>
-	<li> <p>-  Annapurna P. Patil, <b>Narmada Sambaturu</b>, and Krittaya Chunhaviriyakul. <a href="https://pdfs.semanticscholar.org/cb59/5dfb761ac78a1d7590c6d3ea4cde238a011e.pdf">Convergence time evaluation of algorithms in MANETs.</a> International Journal of Computer Science and Information Security 5.1 (2009): 141-149. [<a href="manets.pdf">pdf</a>, <a href="manets.bib">bib</a>]</p>
-	</ul>
-	<br />
-	<h3>Conference and Workshop Presentations</h3>
-	<ul>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Macauley Locke, Zena Lapp, Carmen Molina-París, and Thomas Leitner. <i>Within- and between-host parameters regulate HIV-1 epidemiological outcomes.</i><br />
-	31st International Dynamics & Evolution of Human Viruses Conference, June 19-22 2024. </p>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Emily J. Fray, Fengting Wu, Carolin Zitzmann, Francesco R. Simonetti, Dan H. Barouch, Janet D. Siliciano, Robert F. Siliciano, Ruy M. Ribeiro, Alan S. Perelson, Carmen Molina-París, and Thomas Leitner. <i>Longitudinal dynamics of SIV and HIV divergence during antiretroviral therapy is determined by the decay of short- and long-lived cells.</i> <br /> 
-	30th International Dynamics & Evolution of Human Viruses Conference, April 19-22 2023. </p>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Sumanta Mukherjee, Mart&iacute;n L&oacute;pez-Garc&iacute;a, Carmen Molina-Par&iacute;s, Gautam I Menon, and Nagasuma Chandra. <i>Role of genetic heterogeneity in determining the epidemiological severity of H1N1 influenza.</i> <br /> 
-	Epidemiology meets Immunology and Vice Versa - Linking Math Epidemiology to Math Immunology, SMB Math-Epidemiology/Math-Immunology Subgroups Mid-Year Mini Virtual Conference, February 27-28 2022. </p>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Sumanta Mukherjee, Mart&iacute;n L&oacute;pez-Garc&iacute;a, Carmen Molina-Par&iacute;s, Gautam I Menon, and Nagasuma Chandra. <i>Incorporating genetic heterogeneity into epidemic models for H1N1 influenza</i> <br />
-	Mathematical and Statistical Explorations in Disease Modelling and Public Health, International Centre for Theoretical Sciences (ICTS), Bangalore, India, Jul 1 - 11 2019. [<a href="dmph2019_NarmadaSambaturu_slides.pdf">Slides</a>, <a href="https://www.youtube.com/watch?v=voL45fNJ8BA&list=PL04QVxpjcnjgMqKrG08BaO-LXAt_1Nfcc">Video</a>]</p>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Madhulika Mishra, Rahul Metri and Nagasuma Chandra. <i>An algorithm for identifying druggable targets among influential mutations in individual cancer patients</i> <br />
-	Indo-US conference on Sculpting the future of medicine - Gateway to the post-proteogenome era, at Advanced Centre For Treatment, Research And Education In Cancer (ACTREC), Mumbai, India, Dec 10 - 11 2018.</p>
-	<li> <p>-  <b>Narmada Sambaturu</b> and Nagasuma Chandra. <i>OptiNeo - an algorithm to optimise the number of neo-antigenic peptides for cancer immunotherapy</i> <br />
-	Nature Big Data and Cancer Precision Medicine, Boston, Massachusetts, Oct 1 - 2 2018.</p>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Rahul Metri, Madhulika Mishra and Nagasuma Chandra. <i>An unbiased algorithmic identification of 'influential' mutations in individual cancer patients</i> <br />
-	Nature Big Data and Cancer Precision Medicine, Boston, Massachusetts, Oct 1 - 2 2018. <i>Presented by Nagasuma Chandra</i></p>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Sridhar Hannenhalli, and Nagasuma Chandra. <i>Cutting through the complexity of genomic data: A general method to identify candidate genes</i> <br />
-	RECOMB/ISCB Conference on Regulatory and Systems Genomics with DREAM Challenges, New York, NY, Nov 19 - 21 2017. [<a href="RSG_with_DREAM_2017.pdf">Poster</a>]</p>
-	<li> <p>-  <b>Narmada Sambaturu</b>, Sumanta Mukherjee, Mart&iacuten L&oacutepez-Garc&iacutea, Carmen Molina-Par&iacutes, Gautam I. Menon, and Nagasuma Chandra. <i>Role of genetic heterogeneity in determining the epidemiological severity of H1N1 influenza.</i> <br />
-	Discussion meeting on Mathematical Models of Infection, Immunity and Inflammation, Indian Institute of Science, Bangalore. In association with the EPSRC-DST Indo-UK Initiative in Applied Mathematics and the EU-FP7 supported Indo-European Research Network in Mathematics for Health and Disease. April 2017.</p>
-	</ul>
-	<br />
-	<hr>
-	<h2>Invited Talks</h2><a name="invited_talks"></a>
-	<ul>
-	<li> <p>-  <b>Pathways to STEM, Evolution of Human Immunodeficiency Virus.</b> STEM Santa Fe, New Mexico, USA, Jul 2023. </p>
-	<li> <p>-  <b>Careers in Computer Science, Modeling Disease Spread.</b> STEM Santa Fe, New Mexico, USA, Jun 2022. </p>
-	<li> <p>-  <b>Data Science in Bioinformatics</b>. Women in Data Science (WiDS) Mysuru, India, Sep 2020. [<a href="https://youtu.be/KIqq9joVYn4?t=15556">Video</a>]</p>
-	<li> <p>-  <b>Network Algorithms and their Applications in Biology</b>. Sanjay Ghodawat University, Kolhapur, India, Dec 2018.</p>
-	<li> <p>-  <b>Statistical Thinking in Biomedical Research</b>. KLE College of Pharmacy, Bangalore, India, Apr 2018.</p>
-	</ul>
-	<br />
-	<hr>
-	<h2>Teaching</h2><a name="teaching"></a>
-	<ul>
-	<li> <p>- Instructor for course ISE314, Computer Programming for Engineers, Fall 2024, School of Systems Science and Industrial Engineering, Binghamton University, State University of New York, USA. <br />
-	Topics: Fundamental concepts and applications of computer programming, software engineering, database management, computational problem solving, and statistical techniques for data mining.</p>
-	<li> <p>- Guest Lecturer for the course Molecular Biology, Winter 2021, Pre-Medical Program leading to Doctor of Medicine (MD). International Medical School (St. George's University) Bangalore campus, Karnataka, India. <br />
-	Topics: Molecular Biology Tools and Concepts of OMICS, Bioinformatics, Transgenic Plants, Transgenic Animals, Molecular Medicine, Gene Therapy.</p>
-	<li> <p>- Teaching Assistant for the course Current Trends in Drug Discovery, Summer 2018, Indian Institute of Science, India</p>
-	<li> <p>- Learning Enabler, Tata Consultancy Services, Common Initial Learning Program, 2010, Bidadi, Karnataka, India</p>
-	</ul>
-	<hr>
-	<h2>Past</h2><a name="past"></a>
-	<p align="justify">Before coming to Binghamton University, I worked as a Director's Postdoctoral Fellow the Los Alamos National Laboratory. I completed my PhD in Interdisciplinary Mathematical Sciences at the Indian Institute of Science (IISc), and an MSc in the School of Computing at the National University of Singapore (NUS), Singapore. 
-	Prior to that, I was in the Technology Excellence Group at Tata Consultancy Services (TCS). I did my Bachelors in Computer Science and Engineering in the Visvesvaraya Technological University in Karnataka, India.<br />
-	</p>
-	<hr>
-	<h2>In the News</h2><a name="news"></a>
-	<p align="justify">The work studying the <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006069"> Role of genetic heterogeneity in determining the epidemiological severity of H1N1 influenza</a> was featured in an Indian national newspaper called The Hindu [<a href="https://www.thehindu.com/sci-tech/science/genetic-diversity-can-prevent-rapid-spread-of-infectious-diseases/article23401491.ece">link</a>, <a href="The_Hindu_article.pdf">pdf</a>]. It was also featured on the IISc website [<a href="https://iisc.ac.in/diversity-in-immunity-protects-against-disease-spread/">link</a>, <a href="IISc_website.pdf">pdf</a>], and on a science blog called Research Matters [<a href="https://researchmatters.in/news/diversity-our-genes-may-hold-key-spread-infections">link</a>, <a href="Research_Matters_article.pdf">pdf</a>].<br />
-	</p>
-	<hr>
-	<footer>
-	<p>Last updated September 16, 2024</p>
-	</footer>
-	<!--end right--></div>
-	<!--end container--></div>
+		<div id="left">
+			<img src="Narmada_Sambaturu_headshot.jpeg" alt="My picture" width="230" height="290">
+			<p>
+				<b>Contact:</b><br /><a name="contact"></a>
+				<a href="mailto:nsambaturu@binghamton.edu">nsambaturu@binghamton.edu</a> <br />
+				<a href="mailto:narmada.sambaturu@gmail.com">narmada.sambaturu@gmail.com</a> <br />
+				<br />
+				<b>Office:</b><br /><a name="contact"></a>
+				<a href="https://maps.app.goo.gl/7nGdXxEdmKxoCH5J9">EB R-14</a> <br />
+				Systems Science and <br /> Industrial Engineering,<br />
+				Engineering & Science Building,<br />
+				Binghamton University,<br />
+				Binghamton 13902 <br />
+				New York, USA <br />
+				[<a href="Narmada_Sambaturu_CV.pdf">CV</a>] [<a href="https://scholar.google.co.in/citations?user=afioMdsAAAAJ&hl=en">Google Scholar</a>] <br />
+				[<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Sambaturu+N%5BAuthor%5D">PubMed</a>] [<a href="https://www.linkedin.com/in/narmada-sambaturu-76155720/">Linkedin</a>] <br />
+			</p>
+		</div><!--end left-->
+		<div id="right">
+			<p align="justify">
+				Assistant Professor, <a href="https://www.binghamton.edu/ssie/index.html">School of Systems Science and Industrial Engineering</a>,
+				<a href="https://www.binghamton.edu/">Binghamton University</a>, State University of New York. <br />
+				<br />
+				PhD, Mathematical Biology, <a href="https://iisc.ac.in/">Indian Institute of Science</a>, India. <br />
+				<br />
+				MSc, School of Computing, <a href="https://nus.edu.sg/">National University of Singapore</a>, Singapore. <br />
+				<br />
+				BE, Computer Science and Engineering, <a href="https://vtu.ac.in/">Visveswaraya Technological University</a>, India. <br />
+				<hr>
+				<h2>Research Interests</h2><a name="research"></a>
+			</p>
+			
+			<p align="justify">Mathematical and Computational Biology, Systems Biology, Epidemiology, Vaccines and Immunotherapy, Multi-scale Modeling, Immune Response, Host-pathogen Interactions.		</p>
+					<p>The focus of my research is developing novel, multi-scale, data-driven methods to study infectious diseases and heterogenous host immune responses.
+			 Some of my goals are: </p>
+			<ul>
+				<li> <p>- Understanding how the host affects pathogen evolution, </p>
+				<li> <p>- Improving the prediction and control of epidemics, </p>
+				<li> <p>- Identifying the pathways and genes involved in a disease, and using this knowledge to design interventions, </p>
+				<li> <p>- Rational vaccine design, </p>
+				<li> <p>- Designing public health policies which maximize welfare while accounting for issues like different degrees of adherance to interventions, and disparities in access to healthcare, and </p>
+				<li> <p>- Anticipating novel epi/pandemic-causing pathogens and zoonotic transmissions. </p>
+			</ul>
+			
+			<hr>
+			
+			<h2>Awards</h2><a name="awards"></a>
+			<ul>
+				<li> <p>-  Best Student Paper Award, 2015 IEEE International Conference on Bioinformatics and Biomedicine (BIBM). </p>
+				<li> <p>-  Travel awards: BIBM (2015); RECOMB/ISCB Conference on Regulatory and Systems Genomics (2017); Lakshmi & Aravamudan Student Travel Fund, Office of Development and Alumni Affairs, IISc (2018).</p>
+				<li> <p>-  One of 50 students selected from all over India for participation in a summer camp in Biotechnology at M.S.Swaminathan Research Foundation, Chennai, India (2003). </p>
+				<li> <p>-  All India Rank 25 in Secondary School Certificate (Std X) (2003).</p>
+			</ul>
+			
+			<hr>
+			
+			<h2>Research Funding</h2><a name="funding"></a>
+			<ul>
+				<li> <p>-  Director's Postdoctoral Fellow, Laboratory Directed Research & Development, Los Alamos National Laboratory, New Mexico, USA (2021). </p>
+			</ul>
+			
+			<hr>
+			
+			<h2>Publications</h2><a name="publications"></a>
+			<ul>
+				<li> <p>-  Tin Phan, Jessica M. Conway, Nicole Pagane, Jasmine Kreig, <b>Narmada Sambaturu</b>, Sarafa Iyaniwura, Jonathan Z. Li, Ruy M. Ribeiro, Ruian Ke, and Alan S. Perelson. <a href="https://doi.org/10.1371/journal.ppat.1012236">Understanding early HIV-1 rebound dynamics following antiretroviral therapy interruption: The importance of effector cell expansion</a>. PLOS Pathogens, 2024 20(7): e1012236. [<a href="https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1012236&type=printable">pdf</a>, <a href="phan2024Understanding.bib">bib</a>] </p>
+				<li> <p>-  Ushashi Banerjee, Adithya Chedere, Raksha Padaki, Abhilash Mohan, <b>Narmada Sambaturu</b>, Amit Singh, and Nagasuma Chandra. <a href="https://pubs.acs.org/doi/10.1021/acs.jcim.3c00845">PathTracer comprehensively identifies hypoxia-induced dormancy adaptations in Mycobacterium tuberculosis</a>. Journal of Chemical Information and Modeling, 2023. [<a href="https://pubs.acs.org/doi/epdf/10.1021/acs.jcim.3c00845">pdf</a>, <a href = "banerjee2023pathtracer.bib">bib</a>] </p>
+				<li> <p>-  Vishal Rao, Ushashi Banerjee, <b>Narmada Sambaturu</b>, Sneha Chunchanur, R. Ambica, and Nagasuma Chandra. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/tan.15071">Pressured cytotoxic T cell epitope strength among SARS-CoV-2 variants correlates with COVID-19 severity</a>. HLA, 2023. [<a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/tan.15071#accessDenialLayout">pdf</a>, <a href = "rao2023pressured.bib">bib</a>] </p>
+				<li> <p>-  Emily J. Fray, Fengting Wu, Francesco R. Simonetti, Carolin Zitzmann, <b>Narmada Sambaturu</b>, Carmen Molina-París, Alexandra M. Bender et al. <a href="https://www.cell.com/cell-host-microbe/fulltext/S1931-3128(23)00041-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1931312823000410%3Fshowall%3Dtrue">Antiretroviral therapy reveals triphasic decay of intact SIV genomes and persistence of ancestral variants</a>. Cell Host & Microbe 31, no. 3 2023: 356-372. [<a href="https://www.cell.com/cell-host-microbe/pdfExtended/S1931-3128(23)00041-0">pdf</a>, <a href = "fray2023antiretroviral.bib">bib</a>] </p>
+				<li> <p>-  Piyush Agrawal*, <b>Narmada Sambaturu</b>*, Gulden Olgun, and Sridhar Hannenhalli. <a href="https://www.frontiersin.org/articles/10.3389/fimmu.2022.918817/full">A path-based analysis of infected cell line and COVID-19 patient transcriptome reveals novel potential targets and drugs against SARS-CoV-2</a>. Frontiers in immunology  13 2022. (*equal contribution). [<a href="https://www.frontiersin.org/articles/10.3389/fimmu.2022.918817/pdf?isPublishedV2=False">pdf</a>, <a href = "agrawal2022path.bib">bib</a>] </p>
+				<li> <p>-  <b>Narmada Sambaturu</b>. <a href="https://etd.iisc.ac.in/handle/2005/5071">Multi-scale modelling of immune response and disease spread: methods and applications</a>. PhD Dissertation. 2021. [<a href="PhD_thesis.bib">bib</a>]</p>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Vaidehi Pusadkar, Sridhar Hannenhalli, and Nagasuma Chandra. <a href="https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/btaa941/5952670?redirectedFrom=fulltext">PathExt: a general framework for path-based mining of omics-integrated biological networks.</a>, Bioinformatics 37, no. 9 (2021): 1254-1262. [<a href="PathExt.pdf">pdf</a>, <a href="PathExt.bib">bib</a>, <a href="https://github.com/NarmadaSambaturu/PathExt">GitHub</a>]</p>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Sumanta Mukherjee, Mart&iacute;n L&oacute;pez-Garc&iacute;a, Carmen Molina-Par&iacute;s, Gautam I Menon, and Nagasuma Chandra. <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006069"> Role of genetic heterogeneity in determining the epidemiological severity of H1N1 influenza.</a> PLoS Computational Biology 14(3) (2018): e1006069. [<a href="SIR_genetic_heterogeneities.pdf">pdf</a>, <a href="SIR_genetic_heterogeneities.bib">bib</a>]</p>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Madhulika Mishra, and Nagasuma Chandra. <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-2792-1">EpiTracer - an algorithm for identifying epicenters in condition-specific biological networks.</a> BMC genomics 17.4 (2016): 543. [<a href="epitracer_bmc_genomics.pdf">pdf</a>, <a href = "epitracer_bmc_genomics.bib">bib</a>, <a href="https://github.com/NarmadaSambaturu/EpiTracer">GitHub</a>]</p>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Madhulika Mishra, and Nagasuma Chandra. <a href = "http://ieeexplore.ieee.org/document/7359677/?reload=true">EpiTracer - an algorithm for identifying epicenters in condition-specific biological networks.</a> Proceedings of the 2015 IEEE International Conference on Bioinformatics and Biomedicine (BIBM). IEEE Computer Society, 2015. (<b><i>Best Student Paper Award.</i></b>) [<a href="epitracer_ieee_explore.pdf">pdf</a>, <a href="epitracer_ieee_explore.bib">bib</a>, <a href="https://github.com/NarmadaSambaturu/EpiTracer">GitHub</a>]</p>
+				<li> <p>-  <b>Narmada Sambaturu</b>. <a href="http://scholarbank.nus.edu.sg/handle/10635/118611">Towards handling repeats in genome assembly</a>. MSc Dissertation. 2014. [<a href="msc_dissertation.pdf">pdf</a>, <a href="MSc_thesis.bib">bib</a>]</p>
+				<li> <p>-  Jayavel Sridhar, <b>Narmada Sambaturu</b>, Radhakrishnan Sabarinathan, Hong-Yu Ou, Zixin Deng, Kanagaraj Sekar, Ziauddin Ahamed Rafi, and Kumar Rajakumar. <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0011970">sRNAscanner: a computational tool for intergenic small RNA detection in bacterial genomes.</a> Plos one 5, no. 8 (2010): e11970. [<a href="srnascanner.pdf">pdf</a>, <a href="srnascanner.bib">bib</a>]</p>
+				<li> <p>-  Annapurna P. Patil, <b>Narmada Sambaturu</b>, and Krittaya Chunhaviriyakul. <a href="https://pdfs.semanticscholar.org/cb59/5dfb761ac78a1d7590c6d3ea4cde238a011e.pdf">Convergence time evaluation of algorithms in MANETs.</a> International Journal of Computer Science and Information Security 5.1 (2009): 141-149. [<a href="manets.pdf">pdf</a>, <a href="manets.bib">bib</a>]</p>
+			</ul>
+			
+			<br />
+			
+			<h3>Conference and Workshop Presentations</h3>
+			<ul>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Macauley Locke, Zena Lapp, Carmen Molina-París, and Thomas Leitner. <i>Within- and between-host parameters regulate HIV-1 epidemiological outcomes.</i><br />
+				31st International Dynamics & Evolution of Human Viruses Conference, June 19-22 2024. </p>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Emily J. Fray, Fengting Wu, Carolin Zitzmann, Francesco R. Simonetti, Dan H. Barouch, Janet D. Siliciano, Robert F. Siliciano, Ruy M. Ribeiro, Alan S. Perelson, Carmen Molina-París, and Thomas Leitner. <i>Longitudinal dynamics of SIV and HIV divergence during antiretroviral therapy is determined by the decay of short- and long-lived cells.</i> <br /> 
+				30th International Dynamics & Evolution of Human Viruses Conference, April 19-22 2023. </p>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Sumanta Mukherjee, Mart&iacute;n L&oacute;pez-Garc&iacute;a, Carmen Molina-Par&iacute;s, Gautam I Menon, and Nagasuma Chandra. <i>Role of genetic heterogeneity in determining the epidemiological severity of H1N1 influenza.</i> <br /> 
+				Epidemiology meets Immunology and Vice Versa - Linking Math Epidemiology to Math Immunology, SMB Math-Epidemiology/Math-Immunology Subgroups Mid-Year Mini Virtual Conference, February 27-28 2022. </p>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Sumanta Mukherjee, Mart&iacute;n L&oacute;pez-Garc&iacute;a, Carmen Molina-Par&iacute;s, Gautam I Menon, and Nagasuma Chandra. <i>Incorporating genetic heterogeneity into epidemic models for H1N1 influenza</i> <br />
+				Mathematical and Statistical Explorations in Disease Modelling and Public Health, International Centre for Theoretical Sciences (ICTS), Bangalore, India, Jul 1 - 11 2019. [<a href="dmph2019_NarmadaSambaturu_slides.pdf">Slides</a>, <a href="https://www.youtube.com/watch?v=voL45fNJ8BA&list=PL04QVxpjcnjgMqKrG08BaO-LXAt_1Nfcc">Video</a>]</p>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Madhulika Mishra, Rahul Metri and Nagasuma Chandra. <i>An algorithm for identifying druggable targets among influential mutations in individual cancer patients</i> <br />
+				Indo-US conference on Sculpting the future of medicine - Gateway to the post-proteogenome era, at Advanced Centre For Treatment, Research And Education In Cancer (ACTREC), Mumbai, India, Dec 10 - 11 2018.</p>
+				<li> <p>-  <b>Narmada Sambaturu</b> and Nagasuma Chandra. <i>OptiNeo - an algorithm to optimise the number of neo-antigenic peptides for cancer immunotherapy</i> <br />
+				Nature Big Data and Cancer Precision Medicine, Boston, Massachusetts, Oct 1 - 2 2018.</p>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Rahul Metri, Madhulika Mishra and Nagasuma Chandra. <i>An unbiased algorithmic identification of 'influential' mutations in individual cancer patients</i> <br />
+				Nature Big Data and Cancer Precision Medicine, Boston, Massachusetts, Oct 1 - 2 2018. <i>Presented by Nagasuma Chandra</i></p>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Sridhar Hannenhalli, and Nagasuma Chandra. <i>Cutting through the complexity of genomic data: A general method to identify candidate genes</i> <br />
+				RECOMB/ISCB Conference on Regulatory and Systems Genomics with DREAM Challenges, New York, NY, Nov 19 - 21 2017. [<a href="RSG_with_DREAM_2017.pdf">Poster</a>]</p>
+				<li> <p>-  <b>Narmada Sambaturu</b>, Sumanta Mukherjee, Mart&iacuten L&oacutepez-Garc&iacutea, Carmen Molina-Par&iacutes, Gautam I. Menon, and Nagasuma Chandra. <i>Role of genetic heterogeneity in determining the epidemiological severity of H1N1 influenza.</i> <br />
+				Discussion meeting on Mathematical Models of Infection, Immunity and Inflammation, Indian Institute of Science, Bangalore. In association with the EPSRC-DST Indo-UK Initiative in Applied Mathematics and the EU-FP7 supported Indo-European Research Network in Mathematics for Health and Disease. April 2017.</p>
+			</ul>
+			<br />
+
+			<hr>
+
+			<h2>Invited Talks</h2><a name="invited_talks"></a>
+			<ul>
+				<li> <p>-  <b>Pathways to STEM, Evolution of Human Immunodeficiency Virus.</b> STEM Santa Fe, New Mexico, USA, Jul 2023. </p>
+				<li> <p>-  <b>Careers in Computer Science, Modeling Disease Spread.</b> STEM Santa Fe, New Mexico, USA, Jun 2022. </p>
+				<li> <p>-  <b>Data Science in Bioinformatics</b>. Women in Data Science (WiDS) Mysuru, India, Sep 2020. [<a href="https://youtu.be/KIqq9joVYn4?t=15556">Video</a>]</p>
+				<li> <p>-  <b>Network Algorithms and their Applications in Biology</b>. Sanjay Ghodawat University, Kolhapur, India, Dec 2018.</p>
+				<li> <p>-  <b>Statistical Thinking in Biomedical Research</b>. KLE College of Pharmacy, Bangalore, India, Apr 2018.</p>
+			</ul>
+			<br />
+
+			<hr>
+
+			<h2>Teaching</h2><a name="teaching"></a>
+			<ul>
+				<li> <p>- Instructor for course ISE314, Computer Programming for Engineers, Fall 2024, School of Systems Science and Industrial Engineering, Binghamton University, State University of New York, USA. <br />
+				Topics: Fundamental concepts and applications of computer programming, software engineering, database management, computational problem solving, and statistical techniques for data mining.</p>
+				<li> <p>- Guest Lecturer for the course Molecular Biology, Winter 2021, Pre-Medical Program leading to Doctor of Medicine (MD). International Medical School (St. George's University) Bangalore campus, Karnataka, India. <br />
+				Topics: Molecular Biology Tools and Concepts of OMICS, Bioinformatics, Transgenic Plants, Transgenic Animals, Molecular Medicine, Gene Therapy.</p>
+				<li> <p>- Teaching Assistant for the course Current Trends in Drug Discovery, Summer 2018, Indian Institute of Science, India</p>
+				<li> <p>- Learning Enabler, Tata Consultancy Services, Common Initial Learning Program, 2010, Bidadi, Karnataka, India</p>
+			</ul>
+			
+			<hr>
+			
+			<h2>Past</h2><a name="past"></a>
+			<p align="justify">Before coming to Binghamton University, I worked as a Director's Postdoctoral Fellow the Los Alamos National Laboratory. I completed my PhD in Interdisciplinary Mathematical Sciences at the Indian Institute of Science (IISc), and an MSc in the School of Computing at the National University of Singapore (NUS), Singapore. 
+			Prior to that, I was in the Technology Excellence Group at Tata Consultancy Services (TCS). I did my Bachelors in Computer Science and Engineering in the Visvesvaraya Technological University in Karnataka, India.<br />
+			</p>
+			
+			<hr>
+			
+			<h2>In the News</h2><a name="news"></a>
+			<p align="justify">The work studying the <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006069"> Role of genetic heterogeneity in determining the epidemiological severity of H1N1 influenza</a> was featured in an Indian national newspaper called The Hindu [<a href="https://www.thehindu.com/sci-tech/science/genetic-diversity-can-prevent-rapid-spread-of-infectious-diseases/article23401491.ece">link</a>, <a href="The_Hindu_article.pdf">pdf</a>]. It was also featured on the IISc website [<a href="https://iisc.ac.in/diversity-in-immunity-protects-against-disease-spread/">link</a>, <a href="IISc_website.pdf">pdf</a>], and on a science blog called Research Matters [<a href="https://researchmatters.in/news/diversity-our-genes-may-hold-key-spread-infections">link</a>, <a href="Research_Matters_article.pdf">pdf</a>].<br />
+			</p>
+			
+			<hr>
+			
+			<footer>
+			<p>Last updated September 16, 2024</p>
+			</footer>
+		</div><!--end right-->
+	</div><!--container-->
+	
+	<script>
+	includeHTML();
+	</script>
+
+	<script>
+	function myNavFunction() {
+	  var x = document.getElementById("myLinks");
+	  var y = document.getElementById("menubtn");
+	  if (x.style.display === "block") {
+		x.style.display = "none";
+		y.classList.remove("change");
+	  } else {
+		x.style.display = "block";
+		y.classList.add("change");	
+	  }
+	}
+	</script>
+
+	<script>
+	function myNavReactFunction() {
+	  var x = document.getElementById("myLinks");
+	  var y = document.getElementById("menubtn");
+	  if (x.style.display === "block") {
+		x.style.display = "none";
+		y.classList.remove("change");
+	  } else {
+		x.style.display = "block";
+		y.classList.add("change");	
+	  }
+	}
+	</script>
+
+	
+	<script>
+	window.onscroll = function() {myStickyFunction()};
+
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+
+	function myStickyFunction() {
+	  if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky")
+	  } else {
+		navbar.classList.remove("sticky");
+	  }
+	}
+	</script>
+	
+	<script>
+	// The function actually applying the offset
+	function offsetAnchor() {
+	  if (location.hash.length !== 0) {
+		window.scrollTo(window.scrollX, window.scrollY - 50);
+	  }
+	}
+
+	// Captures click events of all a elements with href starting with #
+	$(document).on('click', 'a[href^="#"]', function(event) {
+	  // Click events are captured before hashchanges. Timeout
+	  // causes offsetAnchor to be called after the page jump.
+	  window.setTimeout(function() {
+		offsetAnchor();
+	  }, 0);
+	});
+
+	// Set the offset when entering page with hash present in the url
+	window.setTimeout(offsetAnchor, 0);
+	</script>
+	
 	</body>
 	</html>
